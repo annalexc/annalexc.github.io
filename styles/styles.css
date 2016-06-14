@@ -2,17 +2,19 @@
 @import url(https://fonts.googleapis.com/css?family=Kristi);
 @import url(https://fonts.googleapis.com/css?family=Anton);
 
-* { box-sizing: content-box; }
+* { 
+  box-sizing: content-box; 
+  margin: 0;
+}
 
 html, body {
-  margin: 0;
   height: 100%;
   width: 100%;
 }
 
 body {
   background-color: white;
-  font-family: 'PT Sans';
+  font-family: 'Quicksand';
 }
 
 #landing {
@@ -48,8 +50,6 @@ body {
 
 #hi {
   position: absolute;
-  /*top: 7%;
-  left: 10%;*/
   color: rgb(198,203,214);
   font: 4em 'Quicksand';
   line-height: 0.7;
@@ -60,14 +60,12 @@ body {
   font-size: 2.3em;
   line-height: 0.7;
   color: tomato;
-  /*color: rgb(110,123,149);*/
 }
 
 #intro {
   position: relative;
   text-align: right;
   margin: 0 auto;
-  /*height: 86%;*/
   width: 86%;
 }
 
@@ -104,22 +102,22 @@ li {
 #key {
   position: fixed;
   bottom: 20px;
-  font: 1.2em 'Anton';
+  font-size: 0.8em;
   margin-top: 0;
-  opacity: 0.5;
+  opacity: 0.45;
   z-index: 1;
 }
 
-#key span {
+#key span.emphasis {
   font-size: 1.45em;
   color: tomato;
   font-weight: bold;
   margin-left: -5px;
   text-shadow: 0.5px 0.5px 0 black;
 }
-h3 {
-  margin: 0;
-  display: inline-block;
+
+#key span#git {
+  font-family: 'Anton';
 }
 
 a, a:visited {
@@ -171,18 +169,25 @@ a:hover, .link:hover {
   background-size: cover;
   background-position: center;
 }
-.description {
-  position: absolute;
-  top: 0;
+
+.project, .ball {
+  box-shadow: -3px -2px 0px rgba(255,114,89, 0.4);
 }
 
 .description {
+  position: absolute;
+  top: 0;
   width: 214px;
   margin: -40px 0 0 -105px;
   text-align: center;
 }
 
-.p1 { margin: 70px 0 0 145px; transform: rotate(-15deg); }
+.description p {
+  text-align: center;
+  font-size: 0.8em;
+}
+
+.p1 { margin: 98px 0 0 156px; transform: rotate(-15deg); }
 .p1 .description { transform: rotate(15deg); margin-left: -75px; }
 
 .p2 { margin: 320px 0 0 330px; transform: rotate(-7deg);}
@@ -193,14 +198,9 @@ a:hover, .link:hover {
 .p4 { margin: 270px 0 0 552px; transform: rotate(7deg);}
 .p4 .description { transform: rotate(-7deg); margin-left: -115px;}
 
-.p5 { margin: 40px 0 0 730px; transform: rotate(15deg); }
+.p5 { margin: 55px 0 0 730px; transform: rotate(15deg); }
 .p5 .description { transform: rotate(-15deg); margin-left: -135px; }
 
-
-.description p {
-  text-align: center;
-  font-size: 0.8em;
-}
 
 #space-rocks {
   background-image: url('../images/space-rocks.gif');
@@ -221,3 +221,44 @@ a:hover, .link:hover {
 #sit-stay {
   background-image: url('../images/sit-stay.gif');
 }
+
+
+/************************/
+/*     MEDIA QUERIES    */
+/************************/
+
+@media all and (max-width:800px) {
+
+  #landing {
+    display: block;
+    overflow: scroll;
+  }
+
+  #content, .project, .project .description, .ball { margin: 0 auto; }
+
+  #left-pane, #right-pane, .project {
+    position: relative;
+    width: 100%;
+    min-width: min-content;
+    float: left;  
+    height: min-content;
+  }
+
+  .project {
+    background-color: transparent;
+  }
+
+  .project, .project .description, .ball {
+    transform: rotate(0deg);
+    text-align: center;
+    box-shadow: none;
+  }
+
+  .project .description{
+    width: 100%;
+  }
+
+}
+
+
+
