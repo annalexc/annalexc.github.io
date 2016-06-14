@@ -37,6 +37,7 @@ body {
 
 .emphasis { font-family: 'Kristi'; }
 
+
 /***********************/
 /*  LEFT PANE STYLING  */
 /***********************/
@@ -53,7 +54,6 @@ body {
   color: rgb(198,203,214);
   font: 4em 'Quicksand';
   line-height: 0.7;
-  font-weight: bold;
 }
 
 .big {
@@ -71,8 +71,7 @@ body {
 
 .arrow {
   color: tomato;
-  font-size: 1.8rem;
-  font-weight: 700;
+  font-size: 1em;
   text-align: right;
 }
 
@@ -97,54 +96,23 @@ li {
   height: 90%;
   width: 100%;
   margin: 10% 0 0 5%;
-  text-align: left; }
-
-#key {
-  position: fixed;
-  bottom: 20px;
-  font-size: 0.8em;
-  margin-top: 0;
-  opacity: 0.45;
-  z-index: 1;
+  text-align: left; 
 }
 
-#key span.emphasis {
-  font-size: 1.45em;
-  color: tomato;
-  font-weight: bold;
-  margin-left: -5px;
-  text-shadow: 0.5px 0.5px 0 black;
-}
-
-#key span#git {
-  font-family: 'Anton';
-}
-
-a, a:visited {
+h3 {
   font: 2.1em 'Anton';
   color: black;
   text-decoration: none;
 }
 
-a:hover, .link:hover {
-  color: rgb(124,136,150);
-}
-
-.link {
+.desc {
   font-size: 1.35em;
-  font-weight: 700;
-  /*color: rgb(202,113,152);*/
+  /*font-weight: 700;*/
   color: rgb(255,114,89);
   margin-left: -10px;
   line-height: 0.8;
-  text-shadow: 2px 2px 0 rgba(0,0,0,0.75);
+  text-shadow: 1px 1px 0 rgba(0,0,0,0.75);
 }
-
- /* -webkit-transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-  transition: all 0.5s ease;*/
-
 
 .project {
   position: absolute;
@@ -155,23 +123,71 @@ a:hover, .link:hover {
   margin: 0 114px;
 }
 
-.ball {
+.circle, .circle::before {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 50%;
-  /*border: 8px solid rgb(238,212,223);*/
   border: 8px solid rgb(198,203,214);
   height: 200px;
   width: 200px;
   margin-left: -105px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+}
+
+.circle {  
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  z-index: 1;
+  cursor: pointer;
 }
 
-.project, .ball {
+.circle::before {
+  content: "Let's go!";
+  font-size: 1.5em;
+  font-weight: bold;
+  color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0,0,0,0.65);
+  opacity: 0;
+  -webkit-transition: opacity 0.5s ease;
+  -moz-transition: opacity 0.5s ease;
+  -o-transition: opacity 0.5s ease;
+  transition: opacity 0.5s ease;
+}
+
+.circle:hover::before {
+  opacity: 1;
+}
+
+
+/*.project, .circle {
   box-shadow: -3px -2px 0px rgba(255,114,89, 0.4);
+}*/
+
+.fa-github {
+  color: rgb(139,149,162);
+}
+
+.fa-github:hover {
+  color: rgba(255,114,89, 0.5);
+}
+
+#git {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: rgb(198,203,214);
+  height: 41px;
+  width: min-content;
+  margin: 0 0 0 -16px;
+}
+
+a {
+  text-decoration: none;
 }
 
 .description {
@@ -222,6 +238,9 @@ a:hover, .link:hover {
   background-image: url('../images/sit-stay.gif');
 }
 
+#hi, .arrow, #key span.emphasis, .circle::before {
+  font-weight: 700;
+}
 
 /************************/
 /*     MEDIA QUERIES    */
@@ -234,7 +253,7 @@ a:hover, .link:hover {
     overflow: scroll;
   }
 
-  #content, .project, .project .description, .ball { margin: 0 auto; }
+  #content, .project, .project .description, .circle { margin: 0 auto; }
 
   #left-pane, #right-pane, .project {
     position: relative;
@@ -248,12 +267,11 @@ a:hover, .link:hover {
     background-color: transparent;
   }
 
-  .project, .project .description, .ball {
+  .project, .project .description, .circle {
     transform: rotate(0deg);
     text-align: center;
     box-shadow: none;
   }
-
   .project .description{
     width: 100%;
   }
