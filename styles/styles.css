@@ -69,6 +69,11 @@ body {
   width: 86%;
 }
 
+#icons {
+  color: tomato;
+  text-align: center;
+}
+
 .arrow {
   color: tomato;
   font-size: 1em;
@@ -101,7 +106,7 @@ li {
 
 h3 {
   font: 2.1em 'Anton';
-  color: black;
+  color: rgb(97,104,123);
   text-decoration: none;
 }
 
@@ -150,7 +155,8 @@ h3 {
   position: absolute;
   top: 0;
   left: 0;
-  background-color: rgba(0,0,0,0.65);
+  /*background-color: rgba(0,0,0,0.65);*/
+  background-color: rgba(77,83,108,0.65);
   opacity: 0;
   -webkit-transition: opacity 0.5s ease;
   -moz-transition: opacity 0.5s ease;
@@ -187,6 +193,7 @@ h3 {
 }
 
 a {
+  color: inherit;
   text-decoration: none;
 }
 
