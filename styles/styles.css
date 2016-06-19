@@ -284,6 +284,7 @@ a {
   }
   #landing {
     display: block;
+    overflow: scroll;
   }
 
  .project, .project .description, .circle::before, #git { margin: 0 auto; }
@@ -321,9 +322,13 @@ a {
    padding: 0 15% 0 7%;
   }
 
-  #right-pane, #content {
+ /* #right-pane, #content {
     overflow-y: scroll;
     overflow-x: hidden;
+  }*/
+
+  #right-pane {
+    overflow: visible;
   }
 
   #content {
