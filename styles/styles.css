@@ -17,6 +17,15 @@ body {
   font-family: 'Quicksand';
 }
 
+#scroll {
+  position: fixed;
+  top: 10px;
+  right: 20px;
+  color: tomato;
+  font-weight: 700;
+  font-size: 1.5em;
+}
+
 #landing {
   background-color: white;
   overflow: hidden;
@@ -30,9 +39,6 @@ body {
 #left-pane, #right-pane {
   position: relative;
   height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .emphasis { font-family: 'Kristi'; }
@@ -43,10 +49,13 @@ body {
 /***********************/
 
 #left-pane {
-  width: 20%;
-  min-width: 360px;
+  min-width: 350px;
   font: 1.75em 'Quicksand';
   color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 #hi {
@@ -78,6 +87,7 @@ body {
   color: tomato;
   font-size: 1em;
   text-align: right;
+  z-index: 0;
 }
 
 li {
@@ -92,15 +102,15 @@ li {
 
 #right-pane {
   right: 0;
-  width: 1000px;
-  min-width: 600px;
+  width: 100%;
+  overflow-x: scroll;
+  overflow-y: hidden;
 }
 
 #content { 
   position: relative;
-  height: 90%;
+  height: 100%;
   width: 100%;
-  margin: 10% 0 0 5%;
   text-align: left; 
 }
 
@@ -188,7 +198,7 @@ h3 {
   border-radius: 50%;
   background-color: rgb(198,203,214);
   height: 41px;
-  width: min-content;
+  width: 41px;
   margin: 0 0 0 -16px;
 }
 
@@ -210,27 +220,32 @@ a {
   font-size: 0.8em;
 }
 
-.p1 { margin: 98px 0 0 156px; transform: rotate(-15deg); }
-.p1 .description { transform: rotate(15deg); margin-left: -75px; }
+.p1 { margin: 175px 0 0 175px; transform: rotate(-15deg); }
+.p1 .description { transform: rotate(15deg); margin-left: -75px; margin-top: -38px; }
 
-.p2 { margin: 320px 0 0 330px; transform: rotate(-7deg);}
-.p2 .description { transform: rotate(7deg); margin-left: -95px; }
+.p2 { margin: 70px 0 0 335px; }
+/*.p2 .description { margin-left: -95px; }*/
 
-.p3 { margin: 0 0 0 440px; }
+.p3 { margin: 120px 0 0 515px; transform: rotate(15deg); }
+.p3 .description { transform: rotate(-15deg); margin-left: -135px; margin-top: -37px;}
 
-.p4 { margin: 270px 0 0 552px; transform: rotate(7deg);}
-.p4 .description { transform: rotate(-7deg); margin-left: -115px;}
+.p4 { margin: 285px 0 0 845px; transform: rotate(-15deg);}
+.p4 .description { transform: rotate(15deg); margin-left: -75px;  margin-top: -38px;}
 
-.p5 { margin: 55px 0 0 730px; transform: rotate(15deg); }
-.p5 .description { transform: rotate(-15deg); margin-left: -135px; }
+.p5 { margin: 220px 0 0 1020px; }
+/*.p5 .description { transform: rotate(-15deg); margin-left: -135px; }*/
+
+.p6 { margin: 335px 0 0 1175px; transform: rotate(15deg); }
+.p6 .description { transform: rotate(-15deg); margin-left: -135px; margin-top: -37px; }
+
 
 
 #space-rocks {
   background-image: url('../images/space-rocks.gif');
 }
 
-#droid-finder {
-  background-image: url('../images/droid-finder.gif');
+#wait-mate {
+  background-image: url('../images/waitmate.gif');
 }
 
 #feel-trip {
@@ -249,29 +264,69 @@ a {
   font-weight: 700;
 }
 
+#droid-finder {
+  background-image: url('../images/droid-finder.gif');
+}
+
 /************************/
 /*     MEDIA QUERIES    */
 /************************/
 
-@media all and (max-width:800px) {
+@media all and (max-width:770px) {
 
+  h3 {
+    font-size: 2.45em;
+    margin-top: 7px;
+  }
+
+  #scroll {
+    display: none;
+  }
   #landing {
     display: block;
     overflow: scroll;
   }
 
-  #content, .project, .project .description, .circle { margin: 0 auto; }
+  #content, .project, .project .description, .circle, .circle::before, #git { margin: 0 auto; }
 
   #left-pane, #right-pane, .project {
     position: relative;
     width: 100%;
-    min-width: min-content;
+    min-width: initial;
     float: left;  
     height: min-content;
   }
 
+  #left-pane {
+    flex-direction: row;
+  }
+
+  #icons {
+    position: absolute;
+    color: rgb(97,104,123);
+    top: 50%;
+    left: 9.5%;
+  }
+
+  #intro {
+   width: 100%;
+   padding: 30px 15% 7% 7%;
+   /*padding: 7%;*/
+  }
+
+  .arrow {
+    position: absolute;
+    text-align: left;
+    width: 100%;
+    height: 100vw;
+    transform: rotate(90deg);
+    top: -70px;
+    right: 3%;
+  }
+
   .project {
     background-color: transparent;
+    height: 33%;
   }
 
   .project, .project .description, .circle {
@@ -281,6 +336,14 @@ a {
   }
   .project .description{
     width: 100%;
+  }
+
+  .circle {
+    margin-top: 55px;
+  }
+  .circle::before {
+    top: -8px;
+    left: -8px;
   }
 
 }
