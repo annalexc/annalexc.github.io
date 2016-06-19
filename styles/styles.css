@@ -285,6 +285,7 @@ a {
   #landing {
     display: block;
     overflow: scroll;
+    -webkit-overflow-scrolling: touch;
   }
 
  .project, .project .description, .circle::before, #git { margin: 0 auto; }
