@@ -220,22 +220,22 @@ a {
   font-size: 0.8em;
 }
 
-.p1 { margin: 175px 0 0 175px; transform: rotate(-15deg); }
+.p1 { margin: 175px 0 0 185px; transform: rotate(-15deg); }
 .p1 .description { transform: rotate(15deg); margin-left: -75px; margin-top: -38px; }
 
-.p2 { margin: 70px 0 0 335px; }
+.p2 { margin: 70px 0 0 345px; }
 /*.p2 .description { margin-left: -95px; }*/
 
-.p3 { margin: 120px 0 0 515px; transform: rotate(15deg); }
+.p3 { margin: 120px 0 0 525px; transform: rotate(15deg); }
 .p3 .description { transform: rotate(-15deg); margin-left: -135px; margin-top: -37px;}
 
-.p4 { margin: 285px 0 0 845px; transform: rotate(-15deg);}
+.p4 { margin: 285px 0 0 855px; transform: rotate(-15deg);}
 .p4 .description { transform: rotate(15deg); margin-left: -75px;  margin-top: -38px;}
 
-.p5 { margin: 220px 0 0 1020px; }
+.p5 { margin: 220px 0 0 1030px; }
 /*.p5 .description { transform: rotate(-15deg); margin-left: -135px; }*/
 
-.p6 { margin: 335px 0 0 1175px; transform: rotate(15deg); }
+.p6 { margin: 335px 0 0 1185px; transform: rotate(15deg); }
 .p6 .description { transform: rotate(-15deg); margin-left: -135px; margin-top: -37px; }
 
 
