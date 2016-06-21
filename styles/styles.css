@@ -142,13 +142,11 @@ h3 {
 .project::after {
   color: rgb(198,203,214);
   display: inline-block;
-  margin: 20px 0 0 10px;
+  margin: 10px 0 0 10px;
   font-size: 1.15em;
   width: 100px;
   white-space: pre;
 }
-
-
 
 
 .circle, .circle::before {
