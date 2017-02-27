@@ -243,15 +243,15 @@ a {
 .p3::after { content: 'D3.js\A MEAN Stack';}
 .p3 .description { transform: rotate(-15deg); margin-left: -135px; margin-top: -37px;}
 
-.p4 { margin: 295px 0 0 905px; transform: rotate(-15deg);}
+.p4 { margin: 295px 0 0 935px; transform: rotate(-15deg);}
 .p4::after { content: 'Express\A Node.js\A MongoDB';}
 .p4 .description { transform: rotate(15deg); margin-left: -75px;  margin-top: -38px;}
 
-.p5 { margin: 230px 0 0 1080px; }
+.p5 { margin: 230px 0 0 1090px; }
 .p5::after { content: 'AngularJS\A Ruby\A Rails\A PostgreSQL';}
 /*.p5 .description { transform: rotate(-15deg); margin-left: -135px; }*/
 
-.p6 { margin: 345px 0 0 1235px; transform: rotate(15deg); }
+.p6 { margin: 345px 0 0 1245px; transform: rotate(15deg); }
 .p6::after { content: 'HTML\A CSS\A JS';}
 .p6 .description { transform: rotate(-15deg); margin-left: -135px; margin-top: -37px; }
 
