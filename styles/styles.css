@@ -232,29 +232,38 @@ a {
 }
 
 .p1 { margin: 205px 0 0 205px; transform: rotate(-15deg); }
-.p1::after { content: 'D3.js\A Express\A Node.js\A MongoDB';}
+.p1::after { content: 'Independent\A Consultant,\A Front-End Web\A Developer';}
 .p1 .description { transform: rotate(15deg); margin-left: -75px; margin-top: -38px; }
+
+.p2 { margin: 100px 0 0 365px; }
+.p2::after { content: 'D3.js\A Express\A Node.js\A MongoDB';}
+/*.p2 .description { margin-left: -95px; }*/
 
 /*.p2 { margin: 100px 0 0 365px; }
 .p2::after { content: 'Ruby\A Rails\A PostgreSQL';}*/
 /*.p2 .description { margin-left: -95px; }*/
 
-.p2 { margin: 150px 0 0 545px; transform: rotate(15deg); }
-.p2::after { content: 'D3.js\A MEAN Stack';}
-.p2 .description { transform: rotate(-15deg); margin-left: -135px; margin-top: -37px;}
+.p3 { margin: 150px 0 0 545px; transform: rotate(15deg); }
+.p3::after { content: 'D3.js\A MEAN Stack';}
+.p3 .description { transform: rotate(-15deg); margin-left: -135px; margin-top: -37px;}
 
-.p3 { margin: 295px 0 0 935px; transform: rotate(-15deg);}
-.p3::after { content: 'Express\A Node.js\A MongoDB';}
-.p3 .description { transform: rotate(15deg); margin-left: -75px;  margin-top: -38px;}
+.p4 { margin: 295px 0 0 935px; transform: rotate(-15deg);}
+.p4::after { content: 'Express\A Node.js\A MongoDB';}
+.p4 .description { transform: rotate(15deg); margin-left: -75px;  margin-top: -38px;}
 
-.p4 { margin: 230px 0 0 1090px; }
-.p4::after { content: 'AngularJS\A Ruby\A Rails\A PostgreSQL';}
+.p5 { margin: 230px 0 0 1090px; }
+.p5::after { content: 'AngularJS\A Ruby\A Rails\A PostgreSQL';}
 /*.p5 .description { transform: rotate(-15deg); margin-left: -135px; }*/
 
-.p5 { margin: 345px 0 0 1245px; transform: rotate(15deg); }
-.p5::after { content: 'HTML\A CSS\A JS';}
-.p5 .description { transform: rotate(-15deg); margin-left: -135px; margin-top: -37px; }
+.p6 { margin: 345px 0 0 1245px; transform: rotate(15deg); }
+.p6::after { content: 'HTML\A CSS\A JS';}
+.p6 .description { transform: rotate(-15deg); margin-left: -135px; margin-top: -37px; }
 
+#nikon {
+  background-image: url('../images/nikon.png');
+  background-size: 78%;
+  background-color: black;
+}
 
 #space-rocks {
   background-image: url('../images/space-rocks.gif');
