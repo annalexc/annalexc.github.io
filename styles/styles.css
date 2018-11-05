@@ -232,7 +232,7 @@ a {
 }
 
 .p1 { margin: 205px 0 0 205px; transform: rotate(-15deg); }
-.p1::after { content: 'Independent\A Consultant,\A Front-End Web\A Developer';}
+.p1::after { content: 'Sr. Front-End\A Engineer\A jQuery\A Sass\A Bootstrap';}
 .p1 .description { transform: rotate(15deg); margin-left: -75px; margin-top: -38px; }
 
 .p2 { margin: 100px 0 0 365px; }
